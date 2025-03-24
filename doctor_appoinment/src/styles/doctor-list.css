@@ -1,0 +1,182 @@
+/* doctor-list.css */
+
+.doctor-list {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .doctor-list h2 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .doctor-list h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3182ce;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+  
+  .doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .doctor-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-image {
+    height: 200px;
+    background-color: #ebf8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .doctor-image svg {
+    width: 100px;
+    height: 100px;
+    color: #3182ce;
+    opacity: 0.7;
+  }
+  
+  .doctor-info {
+    padding: 1.5rem;
+  }
+  
+  .doctor-info h3 {
+    color: #2d3748;
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .specialty {
+    display: inline-block;
+    background: #ebf8ff;
+    color: #3182ce;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .doctor-meta {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    color: #4a5568;
+    font-size: 0.9rem;
+  }
+  
+  .doctor-meta svg {
+    margin-right: 0.5rem;
+    color: #718096;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .book-btn {
+    display: block;
+    width: 100%;
+    background: #3182ce;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .book-btn:hover {
+    background: #2c5282;
+  }
+  
+  /* Rating Styles */
+  .rating {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  
+  .stars {
+    color: #f6e05e;
+    margin-right: 0.5rem;
+  }
+  
+  .reviews {
+    color: #718096;
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .doctors-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .doctor-image {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .doctor-list h2 {
+      font-size: 1.5rem;
+    }
+    
+    .doctors-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .doctor-info {
+      padding: 1.25rem;
+    }
+  }
+  
+  /* Empty State */
+  .empty-doctors {
+    text-align: center;
+    padding: 3rem 0;
+    grid-column: 1 / -1;
+  }
+  
+  .empty-doctors svg {
+    width: 80px;
+    height: 80px;
+    color: #cbd5e0;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-doctors p {
+    color: #718096;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }

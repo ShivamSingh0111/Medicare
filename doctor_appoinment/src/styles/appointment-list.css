@@ -1,0 +1,139 @@
+/* appointment-list.css */
+
+.appointment-list {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .appointment-list h2 {
+    color: #2d3748;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .appointment-list ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .appointment-list li {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .appointment-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .appointment-info h3 {
+    color: #3182ce;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .appointment-info p {
+    color: #4a5568;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .appointment-info p:first-of-type {
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .delete-btn {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    width: 100%;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c53030;
+  }
+  
+  /* Status indicator (you can add status to your appointments) */
+  .appointment-status {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  
+  .status-confirmed {
+    background-color: #c6f6d5;
+    color: #22543d;
+  }
+  
+  .status-cancelled {
+    background-color: #fed7d7;
+    color: #822727;
+  }
+  
+  .status-pending {
+    background-color: #feebc8;
+    color: #7b341e;
+  }
+  
+  /* Empty state styling */
+  .appointment-list .empty-state {
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1;
+  }
+  
+  .empty-state p {
+    color: #718096;
+    font-size: 1.1rem;
+  }
+  
+  .empty-state .icon {
+    font-size: 3rem;
+    color: #cbd5e0;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .appointment-list ul {
+      grid-template-columns: 1fr;
+    }
+    
+    .appointment-list li {
+      padding: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .appointment-list h2 {
+      font-size: 1.5rem;
+    }
+    
+    .appointment-info h3 {
+      font-size: 1.1rem;
+    }
+    
+    .appointment-info p {
+      font-size: 0.9rem;
+    }
+  }
