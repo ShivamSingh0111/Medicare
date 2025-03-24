@@ -2,7 +2,7 @@
 
 A modern, responsive web application for booking doctor appointments with calendar integration. Built with React, this system helps patients find doctors and schedule visits, while giving doctors an organized view of their appointments.
 
-(![alt text](image.png)) 
+![alt text](image.png)
 
 ## ✨ Features
 
