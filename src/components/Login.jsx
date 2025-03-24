@@ -129,7 +129,7 @@ const Login = ({ onLogin }) => {
         </form>
 
         <div className="signup-link">
-          Don't have an account? <a href="/Signup">Sign up</a>
+          Don't have an account? <button onClick={() => navigate('/Signup')}>Sign up</button>
         </div>
       </div>
     </div>
