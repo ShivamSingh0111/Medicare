@@ -34,13 +34,13 @@ A modern, responsive web application for booking doctor appointments with calend
 ### Project Structure
 ```
 doctor-appointment-system/
-├── components/          # Reusable UI components
-├── context/             # State management
-├── pages/               # Application routes
-├── public/              # Static assets
-├── styles/              # Global styles
-├── utils/               # Helper functions
-└── README.md            # You are here!
+├── components/          
+├── context/           
+├── pages/             
+├── public/              
+├── styles/             
+├── utils/               
+└── README.md            
 ```
 
 ###🌟 Why This Project?
